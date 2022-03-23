@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import ExpnceItem from "./ExpenceItem";
 import "./Expence.css";
-
+import ExpensesFilter from "./ExpenceFilter";
 function Expenses(props) {
+  const [expenceFiler, setExpenceFilter] = useState("2020");
+  const onChangeFilter = (event) => {
+    setExpenceFilter(event);
+    console.log(event);
+  };
+
   return (
     <div className="expenses">
+      <ExpensesFilter
+        selected={expenceFiler}
+        onExpenceFilter={onChangeFilter}
+      />
       <ExpnceItem
         title={props.item[0].title}
         amount={props.item[0].amount}
