@@ -5,32 +5,15 @@ function ExpenceForm(props) {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
-  //   const [userInput, setUserInput] = useState({
-  //     enteredTitle: "",
-  //     enteredAmount: "",
-  //     enteredDate: "",
-  //   });
 
   const titleChangersHandler = (event) => {
     setEnteredTitle(event.target.value);
-    // setUserInput({ ...userInput, enteredTitle: event.target.value });
-    // setUserInput((prestate) => {
-    //   return { ...prestate, enteredTitle: event.target.value };
-    // });
   };
   const amountChangersHandler = (event) => {
     setEnteredAmount(event.target.value);
-    // setUserInput({ ...userInput, enteredAmount: event.target.value });
-    // setUserInput((prestate) => {
-    //   return { ...prestate, enteredAmount: event.target.value };
-    // });
   };
   const dateChangersHandler = (event) => {
     setEnteredDate(event.target.value);
-    // setUserInput({ ...userInput, enteredDate: event.target.value });
-    // setUserInput((prestate) => {
-    //   return { ...prestate, enteredDate: event.target.value };
-    // });
   };
 
   const submitHandler = (event) => {
