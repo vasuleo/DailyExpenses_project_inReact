@@ -20,13 +20,16 @@ function ExpenceForm(props) {
     event.preventDefault();
     const data = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
     props.onSaveExpence(data);
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
+  };
+  const canselButton = () => {
+    props.cansel(false);
   };
   return (
     <form onSubmit={submitHandler}>
@@ -62,6 +65,7 @@ function ExpenceForm(props) {
       </div>
       <div className="new-expense__action">
         <button type="submit">Add Expence</button>
+        <button onClick={canselButton}>Cansel</button>
       </div>
     </form>
   );
